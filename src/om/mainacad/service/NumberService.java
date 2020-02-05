@@ -52,4 +52,21 @@ public class NumberService {
         }
         return out;
     }
+
+    public static int getMaxAmbigramm(){
+        for( int i = 9999; i > 999; i--) {
+            for ( int j = 9999; j > 999; j--) {
+                int result = i*j;
+                if (isAmbigramm(result)) {
+                    return result;
+                }
+            }
+        } return 0;
+    }
+
+    private static boolean isAmbigramm(int result) {
+        String resultAsText = String.valueOf(result);
+        StringBuilder reversed = new StringBuilder(resultAsText).reverse();
+        return resultAsText.equals(reversed.toString());
+    }
 }

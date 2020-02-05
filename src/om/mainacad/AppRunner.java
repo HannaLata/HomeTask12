@@ -13,6 +13,8 @@ public class AppRunner {
 
         LOGGER.info("\n" + NumberService.getMultiplicationDescription(number1, number2));
 
+        LOGGER.info(String.valueOf(NumberService.getMaxAmbigramm()));
+
 
     }
 }
